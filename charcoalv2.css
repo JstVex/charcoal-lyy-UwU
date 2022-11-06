@@ -1,0 +1,177 @@
+:root {
+    font-size: 20px;
+    font-family: "Edu SA Beginner";
+    padding: 0;
+    margin: 0;
+    --bg-primary: #363532;
+    --bg-secondary: #f7df89a6;
+    --textcolor: #f6c821;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #8d6c00;
+}
+
+.navbar {
+    background-color: var(--bg-primary);
+    color: var(--textcolor);
+    height: 60px
+}
+
+i {
+    margin-left: 20px;
+    font-size: xx-large;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    margin: 20px 60px 0 60px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--textcolor);
+    font-weight: bold;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 15px;
+    margin-right: 35px;
+}
+
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    background-color: var(--bg-secondary);
+}
+
+.cato h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    text-decoration: underline wavy rebeccapurple;
+}
+
+.cato p {
+    text-align: center;
+}
+
+.cato {
+    min-height: 400px;
+}
+
+.cato img {
+    max-width: 300px;
+    margin: 20px 20px 20px 40px;
+    border-radius: 100%;
+}
+
+.cato .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.catrecter {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 80px 10px 60px 0;
+    height: 100vh;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    'a  b  c'
+    'j  k  d'
+    'i  l  e'
+    'h  g  f';
+
+    grid-template-rows: repeat(4, 25%);
+
+    grid-template-columns: auto;
+}
+
+.catrecter i {
+    color: rgb(124, 119, 119);
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.photo:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+ }
+
+ .foto {
+    margin-top: 30px;
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+
+    grid-auto-rows: 240px;
+ }
+
+ @media screen and (min-width: 600px) {
+    .foto-tall {
+        grid-row: span 2 / auto;
+    }
+
+    .foto-wide {
+        grid-column: span 2 / auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .cato .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
